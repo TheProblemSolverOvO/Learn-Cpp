@@ -33,13 +33,38 @@ void solve(){
 
 }
 /*
+ * A value in programming is a single piece of data, i.e a single character, a number
  *
  *
+ *A program is a collection of instructions that manipulate data to produce an end goal
  *
+ * When values are called directly in the program without being assigned to anything they are called literals
+ *
+ * Observe from the literalPrint() function that literals are read only, they cannot be manipulated since they
+ * have no identifier
+ *
+ *
+ * Hence to manipulate any piece of data it must be identifiable;
+ *
+ *
+ * We can say an object is that which is used to stoare a value in memory. A variable is an object that has a 
+ * name(an identifier)
+ *
+ * we say that an object exists when memory has been allocated for the value it holds
  * */
+//a function that prints literals(values that are placed directly into the source code)
+void literalPrint(){
+	cout << 5;
+	cout << 'A';
+	cout << -6.7;
+	cout << "Hello World";
+}
+
 int main(){
 	fast_io;
-	
+	//literalPrint();	//
+
+	cout << sizeof(int) << " " <<  sizeof(double) << " " << sizeof(char);
 	return 0;
 }
 
