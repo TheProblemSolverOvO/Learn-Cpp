@@ -31,41 +31,39 @@ typedef long long ll;
 //// Use transform(s.begin(), s.end(), s.begin(), ::tolower); to lowercase a string
 // Use transform(s.begin(), s.end(), s.begin(), ::toupper); to uppercase a string
 void solve(){
-	cout << "\n";
-	cout << "The size of ";
+
 }
+
+
+/*
+ *Signed Integers are integers that can take integer values and their signage(+-)
+ *By default integers in c++ are signed, meaning the numbers sign is stored as part of the value
+ *
+ * This means that positive, negative and zero can be stored unlike Unsigned Integers which can only 
+ * store non negative number;
+ *
+ * */
+
 
 int main(){
 	fast_io;
-	short int smallNum;
-	string val;
-	bool value;
-	int num;
-	double decimal;
-	float floatDec;
-	char c;
-	long longNum{99999999999999};
-	ll veryLongNum{99999999999999};
-	cout << "The size of short int is " << sizeof(smallNum);
-	solve();
-	cout << "string is " << sizeof(val);
-	solve();
-	cout << "int is " << sizeof(num);
-	solve();
-	cout << "double is " << sizeof(decimal);
-	solve();
-	cout << "float is " << sizeof(floatDec);
-	solve();
-	cout << "bool is " << sizeof(value);
-	solve();
-	cout << "character is " << sizeof(c);
-	solve();
-	cout << "long int is " << sizeof(longNum);
-	solve();
-	cout << "long long is " << sizeof(veryLongNum);
-	cout << "\n " << 3.14f;
+	// unsigned int val = -38492; results in undefined behaviour
+	// cout << val; results in undefined behaviour as the unsigned int data type can only store non negatives
+	
 
-	cout << "\n This is the long " << longNum << "\n" << "This is the long long " << veryLongNum; 
+	//defining an integer variable that is based on 8 bits, recall that the smallest possible memory allocated
+	//to a variable is 1 byte which is 8 bits.
+	// this results in an error...indeed the type int8_t is treated as a character....not an integer
+	//
+	//
+	//int8_t enoch{123};
+	//cout << enoch;
+	//
+	int x{2147483647};
+	cout << x << '\n';
+	x++;
+	cout << x << "\n";
+	cout << (++(++(++(++(++x))))) << '\n';
 	return 0;
 }
 
